@@ -1,0 +1,126 @@
+/* Sidebar */
+#sidebar-wrapper{
+    z-index:1;
+    position: absolute;
+    width:20%;
+    height:100%;
+    overflow-y:hidden;
+    background: blue;
+    opacity:0.9;
+      transition:all .5s;
+      display:flex;
+      align-items:center;
+  }
+  
+  /* Main Content */
+  #page-content-wrapper{
+    width: 75%;	
+    margin-left: 25%;
+    /* position: absolute; */
+    padding:15px;
+      transition:all .5s;
+  }
+  
+  /* Change the width of the sidebar to display it*/
+  #wrapper.menuDisplayed #sidebar-wrapper{
+    width:250px;
+  }
+  
+  #wrapper.menuDisplayed #page-content-wrapper{
+    padding-left:250px;
+  }
+  
+  /* Sidebar styling */
+  .sidebar-nav{
+    padding:0;
+    list-style:none; 
+      transition:all .5s;
+      width:100%;
+      text-align:center;
+  }
+  
+  .sidebar-nav li{
+    line-height:40px;  
+      width:100%;
+      transition:all .3s;
+      padding:10px;
+  }
+  
+  .sidebar-nav li a {
+    display:block;
+    text-decoration:none;
+    color:#ddd;
+  }
+  
+  .sidebar-nav li:hover{
+    background:#846bab;
+  }
+  
+  /* chatbot css */
+#bot-response {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-top: 60px;
+}
+
+#msg-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+}
+
+#user-input {
+    width: 87%;
+    border: none;
+    border-bottom: 3px solid #009688;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+#send-button {
+    padding: 3px;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+.userText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+}
+
+.userText span {
+    background-color: #009688;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.botText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+}
+
+.botText span {
+    background-color: #50caef;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+#tidbit {
+    position:absolute;
+    bottom:0;
+    right:0;
+    width: 300px;
+}
+
+.chatbox{
+  height: 500px;
+  overflow-y: auto;
+}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Chatbot{% endblock %}
+
+
+{% block body %}
+    <div id="chat-space">
+        <div id="chat-header">
+            <p></p>
+        </div>
+        <div id='chatbox' class='chatbox'>
+            <p class='botText'><span>What's on your mind today?</span></p>
+        </div>
+        <form id="msg-form">
+            <input id="user-input" type="text" name="msg" placeholder="Enter your message here">
+            <button id="send-button" type="submit">Send</button>
+    
+        </form>
+    </div>
+
+    {% block js %}
+    <script src="/static/js/chatbot.js"></script>
+    {% endblock %}
+
+{% endblock %}
+
