@@ -18,4 +18,9 @@ trainer.train(
 # for file in os.listdir(directory):
 #     trainer.train("corpus."+file)
 
-
+"""
+class ChatBot():
+    def init
+        training functions here
+        
+"""

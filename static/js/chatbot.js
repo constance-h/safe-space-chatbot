@@ -6,15 +6,16 @@ function getResponse(){
     $("#user-input").val("");
     $("#chatbox").append(userHtml);
 
-    $("#chatbox").scrollIntoView({block: 'start', behavior:"smooth"});
+    // $("#chatbox").scrollIntoView({block: 'start', behavior:"smooth"});
 
-    $.get("/get_response", {msg: userMsg}).done(function(data){
+    $.post("/get_response", {msg: userMsg}).done(function(data){
         const botHtml = `<p class="botText"><span>${data}</span></p>`;
         $('#chatbox').append(botHtml);
         // $('#chatbox').scrollIntoView({block: 'start', behavior : 'smooth'});
 
 
-});
+    });
+
 }
 
 $('#msg-form').on('submit', (evt) =>{

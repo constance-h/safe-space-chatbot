@@ -124,3 +124,9 @@
   height: 500px;
   overflow-y: auto;
 }
+
+/* Map CSS */
+.map{
+  height: 400px;
+  width: 400px;
+}

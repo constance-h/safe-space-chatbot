@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Find Help{% endblock %}
+
+{% block head %}
+    <script
+        async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhvkNYm_qBzkZ11LRMmti5hc8OUpvwfLA&callback=initMap"></script>
+    </script>
+    <style>
+       #map{
+           height: 400px;
+           width: 100%;
+       } 
+    </style>
+{% endblock %}
+
+
+{% block body %}
+    <h3>Locate help near you</h3>
+
+    <form id= 'search-form' method='POST'>
+
+        <label for='location'>Location</label>
+        <input id='location' name='location-field' type='text' placeholder='city or zipcode'>
+
+        <p>Optional</p>
+        <label for='radius'>Radius</label>
+        <input id='radius' name='radius-field' type='number' placeholder='miles'>
+
+        <label for='keywords'>Keywords</label>
+        <input id='keywords' name='keywords-field' type='text' placeholder='keywords'>
+
+        <button id='locator-submit' type='submit'>Submit</button>
+    </form>
+    <div id='search-error'></div>
+    <div id= 'map' class='map'></div>
+
+    <div id='therapy-data'>
+
+    </div>
+
+
+    
+{% endblock %}
+
+{% block js %}
+<!-- <script type="text/jsx" src="/static/js/locator.jsx"></script> -->
+<script src="/static/js/locator.js"></script>
+{% endblock %}
