@@ -3,10 +3,33 @@
 {% block title %}{% endblock %}
 
 {% block js %}
-
+    <link rel='stylesheet' href='/static/css/homepage.css'>
 {% endblock %}
 
 {% block body %}
+    <h1>Welcome to Safe Space.</h1>
+    <h3>Sometimes all you need is to be heard.</h3>
+    <p id='home-text'>Safe Space is a mental health guide to help you through tough times. Safe Space is home to Spacey, an AI designed to listen to your thoughts and support you with positive affimrations. Times are tough and it's okay not to be okay. We're here for you.</p>
+    <div id='home-2' class='row'>
+        <div id='home-img' class='col-3'>
+            <img src='/static/img/home_img.png'>
+        </div>
+        <div id='home-text-2' class='col-9'>
+            Safe Space is a mental health resource meant to aid others in seeking help. Spacey is an AI trained to be sympathetic and encouraging. It will support you through whatever you're feeling, whether that be sad, scared or even happy--share whatever you're feeling whenever you want! However, it is in no way a replacement for real human communication. We encourage you to use Spacey as a companion to work through your thoughts. However, we hope you will also use our additional resources to find help in your area. 
+        </div>
+    </div>
+    <div id='home-3' class='row'>
+        <div id='disclaimer' class='col-6'>
+            <p>Please note, if you or anyone you know are in critical need, please refer to the following services for free, 24/7 help from a professional:</p>
+            <li><a href src='https://suicidepreventionlifeline.org/'>Suicide Prevention: </a>CALL at 1-800-273-8255</li>
+            <li><a href src='https://www.crisistextline.org/'>Crisis Text Line: </a>Text HOME to 741741</li>
+            <li><a href src='https://www.veteranscrisisline.net/'>Veteren's Crisis Line: </a>TEXT 838255 </li>
+        </div>
+        <div id='therapy-img' class='col-6'>
+            <img src='static/img/therapy.png' height=300px width=450px >
+        </div>
+    </div>
+    
 
     
 {% endblock %}

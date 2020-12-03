@@ -12,21 +12,7 @@ function initMap(mapCenter = {lat : 37.7749, lng : -122.4194}){
 
 }
 
-
-//attaches info window to each marker
-function createInfoWindow(name, address, phone, url){
-    const contentHTML = 
-        '<h3> {name} </h3>'+
-        '<br>'+
-        '<p> {address} </p>'+
-        '<br>'+
-        '<p> {phone} </p>'+
-        '<br>'+
-        '< a href src= {url}>Yelp Page</a>'
-    
-    const infoWindow = new google.maps.InfoWindow({content: contentHTML});
-}
-
+$('#search-error').hide();
 
 $('#search-form').on('submit', (evt) => {
     evt.preventDefault();
@@ -35,11 +21,11 @@ $('#search-form').on('submit', (evt) => {
 
     $.post('/therapy_data.json', formData, (res) => {
         if (res == "error"){
-            $('#search-error').html('No results found. Try with different parameters')
+            $('#search-error').show();
         }
         else {
             //remove search message if one exists
-            $('#search-error').remove();
+            $('#search-error').hide();
             const therapists = res.therapists
 
             //re-center map based on search results

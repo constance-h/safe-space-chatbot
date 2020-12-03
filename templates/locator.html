@@ -7,6 +7,7 @@
         async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhvkNYm_qBzkZ11LRMmti5hc8OUpvwfLA&callback=initMap"></script>
     </script>
+    <link rel='stylesheet' href='/static/css/locator.css'>
     <style>
        #map{
            height: 400px;
@@ -17,26 +18,38 @@
 
 
 {% block body %}
+  
     <h3>Locate help near you</h3>
-
+  
     <form id= 'search-form' method='POST'>
+        
+        <div class='form-group row'>
+            <label for='location' class='col-md-1 col form label'>Location: </label>
+            <div class='col-md-6'>
+                <input id='location' class='form-control' name='location-field' type='text' placeholder='city or zipcode'>
+            </div>
+        </div>
+        
+        <div class='form-group row'>
+            <label for='radius' class='col-md-1 col form label'>Radius: </label>
+            <div class='col-md-6'>
+                <input id='radius' class='form-control' name='radius-field' type='number' placeholder='miles'>
+            </div>
+        </div>
 
-        <label for='location'>Location</label>
-        <input id='location' name='location-field' type='text' placeholder='city or zipcode'>
+        <div class='form-group row'>
+            <label for='keywords' class='col-md-1 col form label' class='form-label'>Keywords: </label>
+            <div class='col-md-6'>
+                <input id='keywords' class='form-control' name='keywords-field' type='text' placeholder='keywords'>
+            </div>
+        </div>
+        
 
-        <p>Optional</p>
-        <label for='radius'>Radius</label>
-        <input id='radius' name='radius-field' type='number' placeholder='miles'>
-
-        <label for='keywords'>Keywords</label>
-        <input id='keywords' name='keywords-field' type='text' placeholder='keywords'>
-
-        <button id='locator-submit' type='submit'>Submit</button>
+        <button id='locator-submit' class='btn btn-dark' type='submit'>Submit</button>
+     
     </form>
-    <div id='search-error'></div>
+    <div id='search-error' class='alert alert-info'role='alert'>No results found. Try with new parameters.</div>
     <div id= 'map' class='map'></div>
-
-    <div id='therapy-data'>
 
     </div>
 

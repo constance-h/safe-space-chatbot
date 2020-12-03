@@ -2,20 +2,30 @@
 
 {% block title %}Chatbot{% endblock %}
 
-
+{% block head %}
+    <link rel='stylesheet' href='/static/css/chat.css'>
+{% endblock %}
 {% block body %}
-    <div id="chat-space">
-        <div id="chat-header">
-            <p></p>
-        </div>
+    <div class='row justify-content-between'>
+        <h3 class='col-4'>Chat with Spacey</h3>
+        <img id='chat-img' class='col-4' src='/static/img/chat.png' height=150px width=300px>
+    </div>
+    <div id="chat-space" class="rounded">
+    
         <div id='chatbox' class='chatbox'>
             <p class='botText'><span>What's on your mind today?</span></p>
+            <!-- <div id='status' class='status' style='display:none' >
+                <p  style='display:none'><span><i>Spacey is typing...</i></span></p>
+            </div> -->
+            
         </div>
-        <form id="msg-form">
-            <input id="user-input" type="text" name="msg" placeholder="Enter your message here">
-            <button id="send-button" type="submit">Send</button>
-    
+        
+        <form id="msg-form" class="form-inline">
+            <input id="user-input" class="form-control mb-2 mr-sm-2" type="text" name="msg" placeholder="Enter your message here">
+            <button id="send-button" class="btn btn-dark mb-2" type="submit">Send</button>
+        
         </form>
+        
     </div>
 
     {% block js %}
