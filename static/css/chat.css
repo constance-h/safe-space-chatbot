@@ -32,13 +32,18 @@ h3{
       padding-right: 15px;
       border-radius: 2px;
   }
-  
+
+
   .botText {
       color: white;
       font-family: monospace;
       font-size: 17px;
       text-align: left;
       line-height: 30px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      max-width: auto;
+      height: auto;
   }
   
   .botText span {

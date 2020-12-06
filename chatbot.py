@@ -5,7 +5,20 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
 
-bot = ChatBot("Chatbot")
+bot = ChatBot(
+    "Spacey",
+    storage_adapter = 'chatterbot.storage.SQLStorageAdapter',
+    logic_adapters= [
+        'chatterbot.logic.BestMatch',
+        {
+            'import_path' : 'chatterbot.logic.BestMatch',
+            'default_response' : 'Sorry, I did not understand that. Please explain?',
+            'maximum_similarity_threshold' : 0.9
+        }
+    ],
+    database_uri = 'sqlite:///database.sqlite3'
+    )
+
 trainer = ChatterBotCorpusTrainer(bot)
 trainer.train(
     "chatterbot.corpus.english.greetings",
@@ -13,14 +26,3 @@ trainer.train(
     "corpus"
 )
 
-# directory = "corpus"
-
-# for file in os.listdir(directory):
-#     trainer.train("corpus."+file)
-
-"""
-class ChatBot():
-    def init
-        training functions here
-        
-"""

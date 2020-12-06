@@ -21,9 +21,8 @@ def chatbot():
 def get_bot_response():
    
     user_input = request.form.get("msg")
-    bot_response = bot.get_response(user_input) #will have to modify to interact with chatbot class
-    #either returns the bot 
-    #
+    bot_response = bot.get_response(user_input)
+        
     return str(bot_response)
 
 @app.route('/therapy_locator')
