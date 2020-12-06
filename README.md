@@ -9,13 +9,13 @@ Safe Space is a final project for Hackbright Academy designed by Constance Huang
 
 ## Tech Stack
 
-** Front End: ** HTML, CSS, Javascript, JQuery
+**Front End:** HTML, CSS, Javascript, JQuery
 
-** Back End: ** Python, Flask
+**Back End:** Python, Flask
 
-** Libraries: ** Chatterbot 
+**Libraries:** Chatterbot 
 
-** API: ** Google Maps Javascript API, Yelp Fusion API
+**API:** Google Maps Javascript API, Yelp Fusion API
 
 ## Installation
 For this code to work on you local machine, the chatterbot library needs to be installed. Refer to the [Chatterbot Quick Start Guide](https://chatterbot.readthedocs.io/en/stable/quickstart.html)
