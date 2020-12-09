@@ -23,4 +23,7 @@ For this code to work on you local machine, the chatterbot library needs to be i
 Install requirements from requirements.txt to install dependencies.
 Upon creation of chatbot, sqlite databases will automatically be created.
 
+## Demo
+
+[![Safe Space Screencap](https://img.youtube.com/vi/mwJuPDmuOO4/0.jpg)](https://www.youtube.com/watch?v=mwJuPDmuOO4&feature=youtu.be)
 
